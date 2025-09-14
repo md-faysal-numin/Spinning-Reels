@@ -142,18 +142,18 @@ spinBtn.addEventListener("click", () => {
   let outputString = transposeString(mainString);
 
   const wins = getWinnings(outputString, bet, lines);
-  account.deposit(wins);
-
+  
   setTimeout(() => {
-    winDisplay.textContent = `${wins}`;
-    for (let i = 0; i < outputString.length; ++i) {
-     
-      for (let j = 0; j < outputString[i].length; ++j) {
-        
-        grid.children[i].children[j].innerHTML = `${outputString[i][j]}`;
-      }
-    
-    }
+      winDisplay.textContent = `${wins}`;
+      for (let i = 0; i < outputString.length; ++i) {
+          
+          for (let j = 0; j < outputString[i].length; ++j) {
+              
+              grid.children[i].children[j].innerHTML = `${outputString[i][j]}`;
+            }
+            
+        }
+        account.deposit(wins);
    
   }, 2000);
 });

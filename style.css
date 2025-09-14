@@ -13,7 +13,7 @@
 #navBar {
   background-color: #19183b;
   height: 5rem;
-  
+
   color: white;
   display: flex;
   justify-content: space-around;
@@ -30,7 +30,6 @@
   padding: 1rem;
 }
 #addBtn {
- 
   background-color: #708993;
   color: white;
   padding: 1rem;
@@ -52,30 +51,27 @@
   font-size: 5rem;
 }
 
-.rowReels{
-  
+.rowReels {
   display: flex;
   width: 50%;
   justify-content: center;
   align-items: center;
   gap: 10px;
-
 }
 
-.box{
+.box {
   height: 100px;
   width: 100px;
   text-align: center;
   background-color: #e7f2ef;
-  border:1px solid black;
+  border: 1px solid black;
   margin-top: 10px;
-
 }
 #betInfo {
   background-color: #e7f2ef;
   text-align: center;
   font-size: 1.5rem;
-  max-width: 100%;
+  flex: 1;
 }
 #betInfo ul {
   list-style-type: none;
@@ -97,7 +93,7 @@
   padding: 1rem;
   border: none;
   border-radius: 2px;
-  background-color: #19183B;
+  background-color: #19183b;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
@@ -110,7 +106,7 @@
 }
 #winDisplay {
   grid-area: win;
-   align-self: center;
+  align-self: center;
   justify-self: center;
   width: 100%;
   text-align: left;
@@ -126,10 +122,9 @@
   padding: 1rem;
   border: none;
   border-radius: 2px;
-  background-color: #19183B;
+  background-color: #19183b;
   color: white;
   font-size: 1.5rem;
-
 }
 .decorate {
   display: flex;
