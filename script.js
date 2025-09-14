@@ -1,10 +1,9 @@
-
 let depositBtn = document.querySelector("#addBtn");
 let inputBet = document.querySelector("#betInput");
 let spinBtn = document.querySelector("#betBtn");
 let lineBet = document.querySelector("#lineBtn");
 let winDisplay = document.querySelector("#winDisplay span");
-let balanceH1 = document.querySelector("#totalBalance");
+let balanceH1 = document.querySelector("#totalBalance span");
 let grid = document.querySelector("#reels");
 let exitBtn = document.querySelector("#exitBtn");
 
@@ -94,7 +93,7 @@ depositBtn.addEventListener("click", () => {
     } else {
       account.deposit(numberDepositAmount);
       updateBalanceDisplay();
-      
+
       break;
     }
   }
@@ -142,29 +141,27 @@ spinBtn.addEventListener("click", () => {
   let outputString = transposeString(mainString);
 
   const wins = getWinnings(outputString, bet, lines);
-  
+  spinBtn.disabled = true;
+
   setTimeout(() => {
-      winDisplay.textContent = `${wins}`;
-      for (let i = 0; i < outputString.length; ++i) {
-          
-          for (let j = 0; j < outputString[i].length; ++j) {
-              
-              grid.children[i].children[j].innerHTML = `${outputString[i][j]}`;
-            }
-            
-        }
-        account.deposit(wins);
-   
+    winDisplay.textContent = `${wins}`;
+    spinBtn.disabled = false;
+    for (let i = 0; i < outputString.length; ++i) {
+      for (let j = 0; j < outputString[i].length; ++j) {
+        grid.children[i].children[j].innerHTML = `${outputString[i][j]}`;
+      }
+    }
+    account.deposit(wins);
   }, 2000);
 });
 
-exitBtn.addEventListener('click', ()=>{
+exitBtn.addEventListener("click", () => {
   window.close();
-})
+});
 
 let account = createBalanceManager();
 
 function updateBalanceDisplay() {
-  balanceH1.innerHTML = `Balance : ${account.getBalance()}`;
+  balanceH1.innerHTML = `${account.getBalance()}`;
 }
 updateBalanceDisplay();
