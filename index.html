@@ -36,9 +36,16 @@
 
         <div id="gameControls">
             <button id="exitBtn">EXIT</button>
-            <input type="number" id="lineBtn" min="1" max="3" >
-            <input type="number" id="betInput" placeholder="Enter Your Bet">
-            <div id="winDisplay">Win: 0</div>
+
+            <div id="line" class="decorate">
+                <label for="lineBtn">Enter how many lines do you wanna bet</label>
+                <input type="number" id="lineBtn" min="1" max="3" >
+            </div>
+            <div id="bet" class="decorate">
+                <label for="betInput">Enter your bet amount per line</label>
+                <input type="number" id="betInput" placeholder="Enter Your Bet">
+            </div>
+            <div id="winDisplay">Win: <span></span></div>
             <button id="betBtn">Place Bet</button>
         </div>
 

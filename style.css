@@ -1,61 +1,123 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#navBar{
-    background-color: #19183B;
-    height: 5rem;
-    /* width: 60%; */
-    /* outline: 2px solid red; */
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-#totalBalance{
-    background-color: #708993;
-    height: 3rem;
-    /* text-align: center; */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 30%;
-    padding: 1rem;
+
+#navBar {
+  background-color: #19183b;
+  height: 5rem;
+  /* width: 60%; */
+  /* outline: 2px solid red; */
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-#addBtn{
-    /* justify-self: flex-end; */
-    background-color: #708993;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 2px ;
+#totalBalance {
+  background-color: #708993;
+  height: 3rem;
+  /* text-align: center; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  padding: 1rem;
+}
+#addBtn {
+  /* justify-self: flex-end; */
+  background-color: #708993;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 2px;
+}
+#main {
+  display: flex;
+  /* outline: 2px solid red; */
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 70vh;
+  /* max-width: 80%; */
+}
+#reels {
+  background-color: #a1c2bd;
+  min-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+#betInfo {
+  background-color: #e7f2ef;
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 100%;
+}
+#betInfo ul {
+  list-style-type: none;
+}
+
+#gameControls {
+  background-color: #708993;
+  flex: 1;
+  display: grid;
+  grid-template-areas:
+    "exit line win btn"
+    "exit bet win btn";
+  gap: 1rem;
+}
+#exitBtn {
+  grid-area: exit;
+  align-self: center;
+  justify-self: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #19183B;
+  color: white;
+  font-size: 1.5rem;
+}
+#line {
+  grid-area: line;
+}
+#bet {
+  grid-area: bet;
+}
+#winDisplay {
+  grid-area: win;
+   align-self: center;
+  justify-self: center;
+  width: 100%;
+  text-align: left;
+  /* outline: 2px solid red; */
+  background-color: #e7f2ef;
+  padding: 0.5rem;
+}
+#betBtn {
+  grid-area: btn;
+  /* max-height: 2rem; */
+  align-self: center;
+  justify-self: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #19183B;
+  color: white;
+  font-size: 1.5rem;
 
 }
-#main{
-    display: flex;
-    outline: 2px solid red;
-    justify-content: space-between;
-    /* align-items: center; */
-    height: 60vh;
-
-}
-#reels{
-    
-    background-color: #A1C2BD;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-}
-#betInfo{
-    background-color:#E7F2EF ;
-    text-align: center;
-    font-size: 1.5rem;
-}
-#betInfo ul{
-    list-style-type: none;
+.decorate {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* outline: 1px solid red; */
+  justify-content: center;
 }
