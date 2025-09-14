@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navBar{
+    background-color: #19183B;
+    height: 5rem;
+    /* width: 60%; */
+    /* outline: 2px solid red; */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#totalBalance{
+    background-color: #708993;
+    height: 3rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    padding: 1rem;
+}
+#addBtn{
+    /* justify-self: flex-end; */
+    background-color: #708993;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 2px ;
+
+}
+#main{
+    display: flex;
+    outline: 2px solid red;
+    justify-content: space-between;
+    /* align-items: center; */
+    height: 60vh;
+
+}
+#reels{
+    
+    background-color: #A1C2BD;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+#betInfo{
+    background-color:#E7F2EF ;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#betInfo ul{
+    list-style-type: none;
+}
