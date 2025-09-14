@@ -13,8 +13,7 @@
 #navBar {
   background-color: #19183b;
   height: 5rem;
-  /* width: 60%; */
-  /* outline: 2px solid red; */
+  
   color: white;
   display: flex;
   justify-content: space-around;
@@ -23,7 +22,7 @@
 #totalBalance {
   background-color: #708993;
   height: 3rem;
-  /* text-align: center; */
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -31,7 +30,7 @@
   padding: 1rem;
 }
 #addBtn {
-  /* justify-self: flex-end; */
+ 
   background-color: #708993;
   color: white;
   padding: 1rem;
@@ -40,11 +39,8 @@
 }
 #main {
   display: flex;
-  /* outline: 2px solid red; */
   justify-content: space-between;
-  /* align-items: center; */
   height: 70vh;
-  /* max-width: 80%; */
 }
 #reels {
   background-color: #a1c2bd;
@@ -54,6 +50,26 @@
   justify-content: center;
   align-items: center;
   font-size: 5rem;
+}
+
+.rowReels{
+  
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.box{
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  background-color: #e7f2ef;
+  border:1px solid black;
+  margin-top: 10px;
+
 }
 #betInfo {
   background-color: #e7f2ef;
@@ -84,6 +100,7 @@
   background-color: #19183B;
   color: white;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 #line {
   grid-area: line;
@@ -97,13 +114,13 @@
   justify-self: center;
   width: 100%;
   text-align: left;
-  /* outline: 2px solid red; */
   background-color: #e7f2ef;
   padding: 0.5rem;
+  cursor: pointer;
 }
 #betBtn {
+  cursor: pointer;
   grid-area: btn;
-  /* max-height: 2rem; */
   align-self: center;
   justify-self: center;
   padding: 1rem;
@@ -118,6 +135,5 @@
   display: flex;
   flex-direction: column;
   width: 80%;
-  /* outline: 1px solid red; */
   justify-content: center;
 }

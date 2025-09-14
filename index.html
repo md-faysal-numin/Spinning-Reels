@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Win Monye, Be Rich</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <nav id="navBar">
-            <div id="totalBalance">Your Balance : <span></span></div>
-            <button id="addBtn">Add Balance</button>
-        </nav>
+      <nav id="navBar">
+        <div id="totalBalance">Your Balance $: <span></span></div>
+        <button id="addBtn">Add Balance</button>
+      </nav>
 
-        <div id="main">
-            <div id="reels">
-
-                <div class="rowReels">A|B|C</div>
-                <div class="rowReels">A|B|C</div>
-                <div class="rowReels">A|B|C</div>
-            </div>
-
-            <div id="betInfo">
-                <h4>If a row matches, the payout = alphabet × bet amount.</h4>
-                <ul>
-                    <li>A - 5</li>
-                    <li>B - 4</li>
-                    <li>C - 3</li>
-                    <li>D - 2</li>
-                </ul>
-            </div>
-
+      <div id="main">
+        <div id="reels">
+          <div class="rowReels">
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+          </div>
+          <div class="rowReels">
+            <div class="box">B</div>
+            <div class="box">B</div>
+            <div class="box">B</div>
+          </div>
+          <div class="rowReels">
+            <div class="box">C</div>
+            <div class="box">C</div>
+            <div class="box">C</div>
+          </div>
         </div>
 
-        <div id="gameControls">
-            <button id="exitBtn">EXIT</button>
-
-            <div id="line" class="decorate">
-                <label for="lineBtn">Enter how many lines do you wanna bet</label>
-                <input type="number" id="lineBtn" min="1" max="3" >
-            </div>
-            <div id="bet" class="decorate">
-                <label for="betInput">Enter your bet amount per line</label>
-                <input type="number" id="betInput" placeholder="Enter Your Bet">
-            </div>
-            <div id="winDisplay">Win: <span></span></div>
-            <button id="betBtn">Place Bet</button>
+        <div id="betInfo">
+          <h4>If a row matches, the payout = alphabet × bet amount.</h4>
+          <ul>
+            <li>A - 5</li>
+            <li>B - 4</li>
+            <li>C - 3</li>
+            <li>D - 2</li>
+          </ul>
         </div>
+      </div>
 
+      <div id="gameControls">
+        <button id="exitBtn">EXIT</button>
 
-
-
+        <div id="line" class="decorate">
+          <label for="lineBtn">Enter how many lines do you wanna bet</label>
+          <input type="number" id="lineBtn" min="1" max="3" />
+        </div>
+        <div id="bet" class="decorate">
+          <label for="betInput">Enter your bet amount per line</label>
+          <input type="number" id="betInput" placeholder="Enter Your Bet" />
+        </div>
+        <div id="winDisplay">Win $: <span></span></div>
+        <button id="betBtn">Place Bet</button>
+      </div>
     </div>
 
-
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
