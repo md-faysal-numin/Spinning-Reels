@@ -144,8 +144,8 @@ spinBtn.addEventListener("click", () => {
   let outputString = transposeString(mainString);
 
   const wins = getWinnings(outputString, bet, lines);
-  spinBtn.disabled = true;
-  spinBtn.style.display = "none";
+//   spinBtn.disabled = true;
+  spinBtn.style.visibility = "hidden";
   setTimeout(() => {
     winDisplay.textContent = `${wins}`;
     for (let i = 0; i < outputString.length; ++i) {
@@ -154,8 +154,8 @@ spinBtn.addEventListener("click", () => {
         }
     }
     account.deposit(wins);
-    spinBtn.disabled = false;
-    spinBtn.style.display = "inline-block";
+    // spinBtn.disabled = false;
+    spinBtn.style.visibility = "visible";
   }, 2000);
 });
 
