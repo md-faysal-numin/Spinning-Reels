@@ -28,6 +28,7 @@ function createBalanceManager() {
   let balance = 0; // private variable
 
   return {
+
     deposit(amount) {
       if (amount > 0) balance += amount;
       updateBalanceDisplay();
@@ -45,6 +46,8 @@ function createBalanceManager() {
       }
       return false;
     },
+
+
   };
 }
 
@@ -142,16 +145,17 @@ spinBtn.addEventListener("click", () => {
 
   const wins = getWinnings(outputString, bet, lines);
   spinBtn.disabled = true;
-
+  spinBtn.style.display = "none";
   setTimeout(() => {
     winDisplay.textContent = `${wins}`;
-    spinBtn.disabled = false;
     for (let i = 0; i < outputString.length; ++i) {
-      for (let j = 0; j < outputString[i].length; ++j) {
-        grid.children[i].children[j].innerHTML = `${outputString[i][j]}`;
-      }
+        for (let j = 0; j < outputString[i].length; ++j) {
+            grid.children[i].children[j].innerHTML = `${outputString[i][j]}`;
+        }
     }
     account.deposit(wins);
+    spinBtn.disabled = false;
+    spinBtn.style.display = "inline-block";
   }, 2000);
 });
 
